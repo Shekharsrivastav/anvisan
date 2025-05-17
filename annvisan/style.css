@@ -1,0 +1,118 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+}
+
+.form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    animation: slideIn 0.8s ease-out;
+    
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background: transparent;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #888;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 8px;
+    color: #2193b0;
+    font-size: 12px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #2193b0;
+}
+
+button {
+    width: 105%;
+    background: #2193b0;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #17638c;
+}
+
+.avatar-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    animation: bounce 5s infinite;
+}
+
+.avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-radius: 3px solid #2193b0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Bouncing Animation*/
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
